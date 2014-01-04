@@ -11,7 +11,6 @@
 
 namespace Sculpin\Bundle\PostsBundle;
 
-use Sculpin\Bundle\PostsBundle\DependencyInjection\Compiler\PostsMapPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -25,7 +24,5 @@ class SculpinPostsBundle extends Bundle
     public function build(ContainerBuilder $container)
     {
         parent::build($container);
-
-        $container->addCompilerPass(new PostsMapPass);
     }
 }
